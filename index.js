@@ -1,5 +1,5 @@
 const app = require('./src/config/config')()
-app.listen(8080, () => console.log("Hello, world"))
+app.listen(process.env.PORT || 3000)
 
 app.get("/", (req, res) => {
     res.send("Oi")
